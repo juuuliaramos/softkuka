@@ -2,6 +2,9 @@ import './style.css'
 import { useState, useEffect } from 'react'
 import axios from 'axios'
 import SetData from '../../components/setData/setData'
+import Footer from '../../components/footer'
+import IconBack from '../../components/utils/arrow-back.svg'
+import IconVader from '../../components/utils/vader.png'
 
 const HomePage = () => {
   const [person, setPerson] = useState([])
@@ -29,6 +32,7 @@ const HomePage = () => {
   return (
     <div id="externaHome">
       <button id="back-btt" onClick={backButton}>
+        <img id="img-back" src={IconBack} />
         Get back
       </button>
       <div id="divButtons">
@@ -56,6 +60,7 @@ const HomePage = () => {
       ) : (
         <span>Carregando</span>
       )}
+      <Footer />
     </div>
   )
 }

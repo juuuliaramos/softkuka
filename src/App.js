@@ -1,12 +1,10 @@
 import Routes from './routes'
 import styled from 'styled-components'
-import Footer from './components/footer'
 
 function App() {
   return (
     <Container>
       <Routes />
-      <Footer />
     </Container>
   )
 }

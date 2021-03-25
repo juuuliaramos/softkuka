@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import Inputlogin from '../../components/inputlogin'
 import { motion } from 'framer-motion'
+import Footer from '../../components/footer'
 
 const LoginPage = () => {
   return (
@@ -14,6 +15,7 @@ const LoginPage = () => {
         <Image src="https://www.veinerd.com/image/cache/catalog/camisetas/starwars-1-estampa-590x620.jpg" />
         <Inputlogin />
       </Container>
+      <Footer />
     </motion.div>
   )
 }
@@ -37,11 +39,20 @@ export const Container = styled.div`
 `
 
 export const Image = styled.img`
-  width: 35%;
+  width: 30%;
   height: 60%;
 
+  /* Responsividade */
   @media screen and (max-width: 764px) {
     width: 90%;
+    height: 100%;
+  }
+  @media screen and (width: 540px) {
+    width: 90%;
+    height: 60%;
+  }
+  @media screen and (min-width: 765px) and (max-width: 1024px) {
+    width: 100%;
     height: 100%;
   }
 `

@@ -11,15 +11,34 @@
 
 /* Back Button */
 #back-btt {
+  width: 100px;
+  height: 30px;
+  white-space: nowrap;
+  background-color: white;
   border-radius: 20px;
   position: fixed;
   top: 0;
   left: 0;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+#back-btt:hover {
+  background-color: #ffaa33;
+  color: black;
+}
+
+/* Icon do back button  */
+#img-back {
+  width: 20px;
+  height: 20px;
 }
 
 /* Div que engloba os buttons */
 #divButtons {
   height: 100%;
+  width: 20%;
+  margin-right: 30px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -27,17 +46,21 @@
 
 /* Classe de estilização dos buttons */
 .buttons {
-  width: 120px;
-  height: fit-content;
+  width: 180px;
+  height: 50px;
   margin: 10px;
   background-color: black;
   border-radius: 20px;
   color: white;
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
 }
 .buttons:hover {
   color: #ffaa33;
+  border-color: #ffaa33;
 }
 
 /* Div das infos do personagem */
@@ -50,4 +73,80 @@
   justify-content: center;
   align-items: center;
   color: white;
+  background-image: url('https://pbs.twimg.com/media/EhGZlJMXsAET-ZK?format=jpg&name=large');
+  background-repeat: no-repeat;
+  background-size: 600px 400px;
+  background-position: center;
+}
+
+/* Responsividade */
+@media screen and (min-width: 425px) and (max-width: 768px) {
+  #externaHome {
+    flex-direction: column;
+  }
+  #divButtons {
+    flex-direction: row;
+    height: fit-content;
+  }
+
+  #data {
+    width: 90%;
+    height: 70%;
+    margin-top: 10px;
+    padding: 5px;
+  }
+
+  h3 {
+    width: 30%;
+    margin-left: 10px;
+  }
+}
+
+@media screen and (max-width: 424px) {
+  #externaHome {
+    width: unset;
+    /* height: 100vh; */
+    flex-direction: column;
+  }
+
+  .buttons {
+    width: fit-content;
+    height: fit-content;
+    margin: 2px;
+  }
+
+  #divButtons {
+    width: 100%;
+    height: fit-content;
+    margin: 0;
+    flex-direction: row;
+    height: fit-content;
+    justify-content: space-around;
+  }
+
+  #data {
+    width: 90%;
+    height: 70%;
+    margin-top: 10px;
+    padding: 5px;
+  }
+
+  h3 {
+    width: 30%;
+    margin-left: 10px;
+  }
+}
+
+@media screen and (max-width: 325px) {
+  #externaHome {
+    width: 100vw;
+    height: 100vh;
+  }
+
+  #data {
+    width: 100%;
+    height: 70%;
+    margin-top: 10px;
+    padding: 5px;
+  }
 }
