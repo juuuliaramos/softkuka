@@ -28,6 +28,7 @@ const SetData = ({ personagens, index }) => {
 
 export default SetData
 
+/*  Estilização */
 export const Div = styled.div`
   width: 100%;
   display: flex;

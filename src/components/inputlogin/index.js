@@ -1,5 +1,4 @@
 import './style.css'
-import imageLogin from '../utils/image-login.svg'
 
 const InputLogin = () => {
   const changePage = () => {

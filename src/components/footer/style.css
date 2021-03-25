@@ -10,9 +10,8 @@
   justify-content: space-evenly;
 }
 
-/* <a>  Estilização */
+/*  Estilização do Link no footer */
 a {
-  text-decoration: none;
   color: black;
 }
 

@@ -11,7 +11,7 @@ function App() {
 
 export default App
 
-// Estilização da home page
+// Estilização
 export const Container = styled.div`
   width: 100%;
   height: 100%;

@@ -4,7 +4,6 @@ import axios from 'axios'
 import SetData from '../../components/setData/setData'
 import Footer from '../../components/footer'
 import IconBack from '../../components/utils/arrow-back.svg'
-import IconVader from '../../components/utils/vader.png'
 
 const HomePage = () => {
   const [person, setPerson] = useState([])
@@ -16,14 +15,14 @@ const HomePage = () => {
     })
   }
 
-  useEffect(() => {
-    getFigure()
-  }, [])
-
   const setFigure = (num) => {
     setIndex(num)
     console.log(index)
   }
+
+  useEffect(() => {
+    getFigure()
+  }, [])
 
   const backButton = () => {
     window.location.assign('/')
@@ -58,7 +57,7 @@ const HomePage = () => {
           <SetData personagens={person} index={index} />
         </div>
       ) : (
-        <span>Carregando</span>
+        <span>... Carregando ...</span>
       )}
       <Footer />
     </div>
